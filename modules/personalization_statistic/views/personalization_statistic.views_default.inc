@@ -174,7 +174,8 @@ function personalization_statistic_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Content: Taxonomy terms on node */
@@ -182,9 +183,9 @@ function personalization_statistic_views_default_views() {
   $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
   $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
   $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
-    'personalization_geographic_locations' => 'personalization_geographic_locations',
-    'tags' => 'tags',
     'location' => 0,
+    'personalization_geographic_locations' => 0,
+    'tags' => 0,
   );
   /* Relationship: Personalization User Scores: User */
   $handler->display->display_options['relationships']['user']['id'] = 'user';
@@ -199,11 +200,12 @@ function personalization_statistic_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Personalization User Scores: Term Score */
+  /* Field: SUM(Personalization User Scores: Term Score) */
   $handler->display->display_options['fields']['score']['id'] = 'score';
   $handler->display->display_options['fields']['score']['table'] = 'personalization_user_scores';
   $handler->display->display_options['fields']['score']['field'] = 'score';
   $handler->display->display_options['fields']['score']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['fields']['score']['group_type'] = 'sum';
   /* Sort criterion: SUM(Personalization User Scores: Term Score) */
   $handler->display->display_options['sorts']['score']['id'] = 'score';
   $handler->display->display_options['sorts']['score']['table'] = 'personalization_user_scores';
