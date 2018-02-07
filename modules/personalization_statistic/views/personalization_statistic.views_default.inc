@@ -126,9 +126,23 @@ function personalization_statistic_views_default_views() {
   $handler->display->display_options['fields']['score']['field'] = 'score';
   $handler->display->display_options['fields']['score']['group_type'] = 'sum';
   $handler->display->display_options['fields']['score']['label'] = 'Score';
+  /* Filter criterion: Taxonomy vocabulary: Machine name */
+  $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['machine_name']['expose']['operator_id'] = 'machine_name_op';
+  $handler->display->display_options['filters']['machine_name']['expose']['label'] = 'Vocabulary';
+  $handler->display->display_options['filters']['machine_name']['expose']['operator'] = 'machine_name_op';
+  $handler->display->display_options['filters']['machine_name']['expose']['identifier'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: Statistic Page */
+  $handler = $view->new_display('page', 'Statistic Page', 'page');
   $handler->display->display_options['path'] = 'admin/config/system/personalization/statistic';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Statistic';
