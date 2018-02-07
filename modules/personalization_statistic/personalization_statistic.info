@@ -1,0 +1,5 @@
+name = Personalization Statistic
+description = Contains views for viewing statistic and with suggested content block.
+package = personalization
+core = 7.x
+dependencies[] = personalization_views

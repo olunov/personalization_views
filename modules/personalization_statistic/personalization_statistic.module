@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Contains general functionality for the module.
+ */
+
+/**
+ * Implements hook_views_api().
+ */
+function personalization_statistic_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'personalization_statistic') . '/views',
+  );
+}
+
+/**
+ * Implements hook_permission().
+ */
+function personalization_statistic_permission() {
+  return array(
+    'view personalization statistic' => array(
+      'title' => t('View personalization statistic'),
+      'description' => t('View personalization statistic per taxonomy term.'),
+    ),
+  );
+}
