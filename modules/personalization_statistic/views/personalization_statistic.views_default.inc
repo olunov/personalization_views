@@ -13,7 +13,7 @@ function personalization_statistic_views_default_views() {
 
   $view = new view();
   $view->name = 'personalization_views_statistic';
-  $view->description = '';
+  $view->description = 'Provides page for reviewing personalization statistic per each of term';
   $view->tag = 'default';
   $view->base_table = 'taxonomy_term_data';
   $view->human_name = 'Personalization Views Statistic';
