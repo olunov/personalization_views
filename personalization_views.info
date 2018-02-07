@@ -1,0 +1,8 @@
+name = Personalization Views
+description = Adds integration Personalization and Views modules.
+package = personalization
+core = 7.x
+dependencies[] = personalization
+dependencies[] = views
+
+files[] = views/personalization_views_plugin_argument_default_current_user.inc

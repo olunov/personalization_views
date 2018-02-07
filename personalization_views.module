@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Contains general functionality for the module.
+ */
+
+/**
+ * Implements hook_views_api().
+ */
+function personalization_views_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'personalization_views') . '/views',
+  );
+}
