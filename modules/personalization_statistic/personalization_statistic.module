@@ -24,5 +24,9 @@ function personalization_statistic_permission() {
       'title' => t('View personalization statistic'),
       'description' => t('View personalization statistic per taxonomy term.'),
     ),
+    'view personalization suggested content' => array(
+      'title' => t('View suggested content'),
+      'description' => t('View suggested content for current user.'),
+    ),
   );
 }
