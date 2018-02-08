@@ -134,7 +134,7 @@ function personalization_statistic_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['expose']['operator_id'] = 'machine_name_op';
   $handler->display->display_options['filters']['machine_name']['expose']['label'] = 'Vocabulary';
   $handler->display->display_options['filters']['machine_name']['expose']['operator'] = 'machine_name_op';
-  $handler->display->display_options['filters']['machine_name']['expose']['identifier'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['expose']['identifier'] = 'vocabulary';
   $handler->display->display_options['filters']['machine_name']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
