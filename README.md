@@ -22,4 +22,4 @@ Current maintainers:
 * Oleksandr Lunov ([alunyov](https://www.drupal.org/user/103985))
 
 Supporting organizations: 
-
+* [EPAM Systems](https://www.drupal.org/epam-systems)
