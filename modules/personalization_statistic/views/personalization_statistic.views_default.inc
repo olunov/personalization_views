@@ -206,6 +206,7 @@ function personalization_statistic_views_default_views() {
   $handler->display->display_options['fields']['score']['field'] = 'score';
   $handler->display->display_options['fields']['score']['relationship'] = 'term_node_tid';
   $handler->display->display_options['fields']['score']['group_type'] = 'sum';
+  $handler->display->display_options['fields']['score']['exclude'] = TRUE;
   /* Sort criterion: SUM(Personalization User Scores: Term Score) */
   $handler->display->display_options['sorts']['score']['id'] = 'score';
   $handler->display->display_options['sorts']['score']['table'] = 'personalization_user_scores';
