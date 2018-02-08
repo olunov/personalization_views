@@ -108,18 +108,18 @@ function personalization_statistic_views_default_views() {
   $handler->display->display_options['fields']['pages']['field'] = 'pages';
   $handler->display->display_options['fields']['pages']['group_type'] = 'sum';
   $handler->display->display_options['fields']['pages']['label'] = 'Views';
-  /* Field: SUM(Personalization User Scores: Term location) */
-  $handler->display->display_options['fields']['location']['id'] = 'location';
-  $handler->display->display_options['fields']['location']['table'] = 'personalization_user_scores';
-  $handler->display->display_options['fields']['location']['field'] = 'location';
-  $handler->display->display_options['fields']['location']['group_type'] = 'sum';
-  $handler->display->display_options['fields']['location']['label'] = 'Location';
   /* Field: SUM(Personalization User Scores: Term searching) */
   $handler->display->display_options['fields']['searches']['id'] = 'searches';
   $handler->display->display_options['fields']['searches']['table'] = 'personalization_user_scores';
   $handler->display->display_options['fields']['searches']['field'] = 'searches';
   $handler->display->display_options['fields']['searches']['group_type'] = 'sum';
   $handler->display->display_options['fields']['searches']['label'] = 'Searching';
+  /* Field: SUM(Personalization User Scores: Term location) */
+  $handler->display->display_options['fields']['location']['id'] = 'location';
+  $handler->display->display_options['fields']['location']['table'] = 'personalization_user_scores';
+  $handler->display->display_options['fields']['location']['field'] = 'location';
+  $handler->display->display_options['fields']['location']['group_type'] = 'sum';
+  $handler->display->display_options['fields']['location']['label'] = 'Location';
   /* Field: SUM(Personalization User Scores: Term Score) */
   $handler->display->display_options['fields']['score']['id'] = 'score';
   $handler->display->display_options['fields']['score']['table'] = 'personalization_user_scores';
