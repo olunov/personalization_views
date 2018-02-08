@@ -41,8 +41,8 @@ function personalization_statistic_views_default_views() {
     'name' => 'name',
     'name_1' => 'name_1',
     'pages' => 'pages',
-    'location' => 'location',
     'searches' => 'searches',
+    'location' => 'location',
     'score' => 'score',
   );
   $handler->display->display_options['style_options']['default'] = 'score';
@@ -63,21 +63,21 @@ function personalization_statistic_views_default_views() {
     ),
     'pages' => array(
       'sortable' => 1,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'location' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
+      'default_sort_order' => 'desc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
     'searches' => array(
       'sortable' => 1,
-      'default_sort_order' => 'asc',
+      'default_sort_order' => 'desc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'location' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'desc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
